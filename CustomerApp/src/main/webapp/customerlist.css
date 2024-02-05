@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+body{
+    background-image: url(customerlist_image.png);
+    background-size: cover;
+    /* display: flex; */
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    /* font-weight: 30px; */
+    font-weight: 10rem;
+}
+a{
+    text-decoration: none;
+}
+button,select,input{
+    
+    height: 30px;
+    border-radius: 5px;
+}
+.elements{
+    display: flex;
+    /* margin-top: 1rem; */
+    margin-left: 10rem;
+    margin-right: 20rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #3a4553;
+    /* justify-content: center; */
+}
+.search{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#status{
+    /* margin-top: -20px; */
+    margin-top: 2rem;
+    margin-left: 17.5rem;
+    
+}
+#search-in
+{
+    margin-left: 10px;
+}
+
+
