@@ -148,7 +148,6 @@ public class CustomerBoImp implements CustomerBo {
 		Customer e=null;
 		try {
 //			
-//			res = statement.executeQuery(GET_ONE_QUERY);
 			
 			prepareStatement = connection.prepareStatement(GET_ONE_QUERY);
 			
