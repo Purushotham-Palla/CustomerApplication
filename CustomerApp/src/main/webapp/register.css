@@ -12,12 +12,16 @@ body{
     /* font-weight: 50px; */
     
 }
-p{
+#regg{
     font-size: 40px;
     /* text-align: center;
     margin-top: 4rem;
     font-size: 3rem;
     font-weight: 10rem; */
+}
+
+#sucess{
+	font-size:5px;
 }
 
 .details {

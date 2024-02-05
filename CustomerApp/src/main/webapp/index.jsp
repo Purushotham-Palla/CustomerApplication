@@ -19,7 +19,7 @@
 	                </div>
 	                <div class="login">
 	                    
-	                    <!-- <button class="button1" ><a href="register.jsp">Register</a></button>-->
+	                     <button class="button1" ><a href="register.jsp">Register</a></button>
                     	<button class="button2"><a href="login.jsp">Login</a></button>
 	                    
 	                </div>

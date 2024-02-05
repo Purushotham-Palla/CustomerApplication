@@ -15,9 +15,11 @@ public class LoginBoImp implements LoginBo {
 	private static Statement statement;
 	private static ResultSet res;
 	
-	
+	private final static String INSERT_QUERY = "INSERT into `login`(`login-id`,`password`) values(?,?)";
 	
 	private final static String GET_One_QUERY = "SELECT * FROM  `login` WHERE `login-id`=? AND `password`=?";
+	
+	
 	
 	
 	
@@ -54,65 +56,8 @@ public class LoginBoImp implements LoginBo {
 	
 	
 
-//	@Override
-//	public int login() {
-//		// TODO Auto-generated method stub
-//		
-//		return 0;
-//	}
+
 	
-	/*
-	public ArrayList<Login> login() {
-		 
-		 
-		 ArrayList<Login> loginList = new ArrayList<Login>();
-//		 Object[] loginList = new Object[1];
-		 String password=null;
-		 int id=0;
-		 
-		 
-		 try {
-			statement = connection.createStatement();
-			
-			 res = statement.executeQuery(GET_QUERY);
-//			 res.getInt("id");
-//			 id = Integer.toString(res.getInt("Login-id"));
-//			 password = res.getString("password");
-			 
-			 
-			 
-			 while(res.next())
-			 {
-				id = res.getInt("login-id");
-				password = res.getString("password");
-				 
-				 
-				 
-				 Login e = new Login(id, password);
-				 
-				 loginList.add(e);
-//				 loginList[1]=e;
-				 
-				 break;
-			 }
-		
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 
-//		 System.out.println(id);
-//		 System.out.println(loginList.get(0));
-//		 System.out.println(password);
-		 
-		return loginList;
-		 
-		
-//		return employeeList;
-	
-	
-	}
-	*/
 	public Login getLogin(String loginId,String password)
 	{
 		Login log=null;
@@ -122,6 +67,9 @@ public class LoginBoImp implements LoginBo {
 			prepareStatement=connection.prepareStatement(GET_One_QUERY);
 			prepareStatement.setString(1, loginId);
 			prepareStatement.setString(2, password);
+			
+
+
 			ResultSet res = prepareStatement.executeQuery();
 			
 			if(res.next())
@@ -137,6 +85,28 @@ public class LoginBoImp implements LoginBo {
 			e.printStackTrace();
 		}
 		return log;
+		
+	}
+	
+	
+	 public int save(Login log)
+	{
+//		Connection connection = null;
+		try{
+			prepareStatement = connection.prepareStatement(INSERT_QUERY);
+			
+			prepareStatement.setString(1, log.getId());
+			prepareStatement.setString(2, log.getPassword());
+			int i = prepareStatement.executeUpdate();
+			
+			return i;
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return 0;
 		
 	}
 	
