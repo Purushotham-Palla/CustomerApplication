@@ -37,7 +37,8 @@ public class AddCustomer extends HttpServlet {
 		int i = customerBoimp.save(customer);
 		PrintWriter out = response.getWriter();
 		if(i == 1) {
-			out.println("Result="+"Succefully Added");
+			// out.println("Result="+"Succefully Added");
+			response.sendRedirect("addCustomersuccess.jsp");
 		}
 		else {
 			out.println("Result="+"UnSuccefully Added");
