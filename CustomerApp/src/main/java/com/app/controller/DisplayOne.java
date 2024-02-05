@@ -34,8 +34,6 @@ public class DisplayOne extends HttpServlet{
 //				response.sendRedirect("blocked.html");
 				
 			}
-//Customer(int id, String firstname, String lastname, String street, String address, String city, String state,
-//			String email, String phone) {			
 			Customer em = new Customer(one.getId(),one.getFirstname(),one.getLastname(),one.getStreet(),one.getAddress(),one.getCity(),one.getState(),one.getEmail(),one.getPhone());
 			
 	/*		em.setId(id);
