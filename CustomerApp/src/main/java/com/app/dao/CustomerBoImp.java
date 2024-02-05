@@ -166,10 +166,7 @@ public class CustomerBoImp implements CustomerBo {
 				String state = res.getString("state");
 				String email = res.getString("email");
 				String phone = res.getString("phone");
-//				public Customer(int id, String firstname, String lastname, String street, String address, String city, String state,
-//				String email, String phone) 
 				e=new Customer(id1,firstname,lastname,street,address,city,state,email,phone);
-//				e = new Customer(id1, name, email, department, salary);
 			}
 			
 				
