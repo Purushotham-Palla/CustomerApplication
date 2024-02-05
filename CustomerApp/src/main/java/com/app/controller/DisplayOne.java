@@ -36,8 +36,7 @@ public class DisplayOne extends HttpServlet{
 			}
 			Customer em = new Customer(one.getId(),one.getFirstname(),one.getLastname(),one.getStreet(),one.getAddress(),one.getCity(),one.getState(),one.getEmail(),one.getPhone());
 			
-	/*		em.setId(id);
-			one.getId();*/
+//			one.getId();*/
 			
 			out.println(em.getId()+" "+em.getFirstname()+" "+em.getStreet()+" "+em.getAddress()+" "+em.getCity()+" "+em.getState());
 	//		out.println();
